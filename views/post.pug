@@ -6,4 +6,10 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
     body 
-        h1 Hello post
+        if(status)
+            each data in list
+                h1  #{data.title}
+                h2  #{data.description}
+                hr
+        else
+            h1  We Failed Call Data in DataBase   
